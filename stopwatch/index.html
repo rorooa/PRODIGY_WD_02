@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Stopwatch</h1>
+
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch">
+        <span class="slider round"></span>
+      </label>
+      <span id="themeLabel">Dark Mode</span>
+    </div>
+
+    <div class="time-display" id="display">00-00-00-000</div>
+    
+    <div class="buttons">
+      <button id="startStop"><i class="fas fa-play"></i> Start</button>
+      <button id="reset"><i class="fas fa-undo-alt"></i> Reset</button>
+      <button id="lap"><i class="fas fa-flag"></i> Lap</button>
+    </div>
+
+    <ul id="laps" class="laps"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --container-bg: rgba(255, 255, 255, 0.2);
+  --button-bg: #ffffff;
+  --button-text: #333;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --container-bg: rgba(255, 255, 255, 0.05);
+  --button-bg: #333;
+  --button-text: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  text-align: center;
+  background: var(--container-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.theme-toggle {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #4e54c8;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.time-display {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.buttons button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.3s ease;
+  transform: scale(1);
+}
+
+.buttons button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.laps {
+  margin-top: 1rem;
+  list-style-type: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.laps li {
+  padding: 5px;
+  border-bottom: 1px solid #999;
+}
